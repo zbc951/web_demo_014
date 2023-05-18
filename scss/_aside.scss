@@ -1,0 +1,82 @@
+aside {
+  width: 100%;
+  display: fixed;
+  z-index: 555;
+
+  .left_Btn {
+    width: 122px;
+    height: 127px;
+    position: absolute;
+    top: 688px;
+    top: 688px;
+    left: 22px;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &.active {
+      transform: scale(1.05);
+    }
+  }
+
+  .left_Btn::before {
+    content: " ";
+    width: 133px;
+    height: 85px;
+    position: absolute;
+    top: -90px;
+    left: 22px;
+    animation: wiggle 2s linear infinite;
+  }
+
+  .right_Btn {
+    width: 122px;
+    height: 138px;
+    position: absolute;
+    top: 688px;
+    right: 22px;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &.active {
+      transform: scale(1.05);
+    }
+  }
+
+  .right_Btn::before {
+    content: " ";
+    width: 133px;
+    height: 85px;
+    position: absolute;
+    top: -90px;
+    right: 22px;
+    animation: wiggle 2s ease-in-out infinite;
+  }
+
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+}

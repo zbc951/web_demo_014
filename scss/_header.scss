@@ -1,0 +1,218 @@
+header {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  margin: 0;
+  z-index: 999;
+
+  .logo {
+    width: 200px;
+    height: 55px;
+    background: lightcyan;
+    padding: 8px 42px;
+    position: absolute;
+    top: 0px;
+    left: 187px;
+
+    a {
+      color: $font3;
+      font-size: 40px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  .top {
+    width: 100%;
+    min-width: 829px;
+    height: auto;
+    background-color: $headerBG;
+    display: flex;
+    justify-content: space-between;
+
+    .lang {
+      width: 187px;
+      height: 55px;
+      background: $langBG;
+      position: relative;
+      cursor: pointer;
+
+      .lang_icon {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 21px;
+        left: 16px;
+        z-index: 50;
+
+        &::before {
+          content: ">";
+          width: 11px;
+          height: 9px;
+          color: $mainfont;
+          font-size: 20px;
+          font-weight: bold;
+          background: $langBG;
+          transform: rotate(90deg);
+          position: absolute;
+          top: 2px;
+          right: -131px;
+        }
+      }
+
+      select {
+        width: 189px;
+        height: 40px;
+        background: $langBG;
+        color: $mainfont;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        margin: 8px 0 0 -2px;
+        padding: 0 45px;
+        appearance: none;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+
+    .empty {
+      width: auto;
+      min-width: 200px;
+      height: 55px;
+    }
+
+    .unLog {
+      width: auto;
+      min-width: 625px;
+      height: auto;
+      padding: 12px 14px 12px 12px;
+      box-sizing: border-box;
+      display: flex;
+
+      .forgotPW {
+        color: $mainfont;
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 5px 0 12px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &.active {
+          color: $subfont;
+          font-weight: bold;
+        }
+      }
+
+      input {
+        margin-left: 12px;
+        &.ID,
+        &.PW {
+          width: 150px;
+          height: 25px;
+          padding: 8px 9px;
+          box-sizing: border-box;
+          border-radius: 3px;
+          border: 0;
+        }
+
+        &.signUp {
+          width: auto;
+          height: 26px;
+          @include header_Btn1;
+        }
+
+        &.login {
+          width: auto;
+          height: 26px;
+          @include header_Btn2;
+        }
+      }
+    }
+  }
+
+  nav {
+    width: 100%;
+    min-width: 1400px;
+    height: 51px;
+    display: flex;
+    background-color: $navBG;
+
+    .navDeco {
+      width: 505px;
+      min-width: 218px;
+      height: 51px;
+    }
+
+    ul {
+      width: 100%;
+      min-width: 1433px;
+      height: auto;
+      background: $navBG;
+      display: flex;
+      justify-content: end;
+
+      li {
+        width: auto;
+        height: 51px;
+        color: $mainfont;
+        font-size: 18px;
+        white-space: nowrap;
+        padding: 15px 19px;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+
+        &:first-child {
+          &::before {
+            content: " ";
+            width: 2px;
+            height: 48px;
+            background: $navBorder;
+            position: absolute;
+            top: 2px;
+            left: 0;
+          }
+        }
+
+        &::after {
+          content: " ";
+          width: 2px;
+          height: 48px;
+          background: $navBorder;
+          position: absolute;
+          top: 2px;
+          right: 0;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+          background: $navHover;
+
+          a {
+            color: $subfont;
+            font-weight: bold;
+            transition: all 0.2s ease-in;
+          }
+        }
+      }
+
+      &:first-child::before {
+        content: " ";
+        width: 2px;
+        height: 48px;
+        background: $navBorder;
+        position: absolute;
+        top: 2px;
+        left: 0;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+}

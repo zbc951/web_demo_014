@@ -1,0 +1,98 @@
+//header
+header .top .lang_icon {
+  background: url(../img/icon_lang.png) no-repeat;
+  background-size: contain;
+}
+
+header nav .navDeco {
+  background: url(../img/navBg.png) no-repeat;
+  background-size: cover;
+}
+
+//marquee
+.ad .mq_icon {
+  background: url(../img/Icon_mq.png) no-repeat;
+}
+
+//mainWrap
+.mainWrap .titleArea {
+  background: url(../img/titleArea.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainWrap .typePic .child {
+  background: url(../img/gameType_Btn.png) no-repeat;
+  background-size: cover;
+}
+
+.mainWrap .sidePic {
+  background: url(../img/gType_sidePic.png) no-repeat;
+  background-size: 600%;
+}
+
+.mainWrap .sidePic::after {
+  background: url(../img/gType_Name.png) no-repeat;
+  background-size: 100%;
+}
+
+.mainWrap .inBtn {
+  background: url(../img/gameType_btn2.png) no-repeat;
+  background-size: contain;
+}
+
+.mainWrap .newsArea {
+  background: url(../img/bottomBg.png) no-repeat;
+  background-size: cover;
+}
+
+.mainWrap .newsArea::after {
+  background: url(../img/girl_text.png) no-repeat;
+  background-size: contain;
+}
+
+.mainWrap .newsBtn_Line::before {
+  background: url(../img/girl.png) no-repeat;
+  background-size: contain;
+}
+
+.mainWrap .newsBtn_Line::after {
+  background: url(../img/border.png) no-repeat;
+  background-size: contain;
+}
+
+.mainWrap .Newbtn::after {
+  background: url(../img/helpBtn.png) no-repeat;
+  background-size: 400%;
+}
+
+aside .left_Btn {
+  background: url(../img/btn_left.png) no-repeat;
+  background-size: contain;
+}
+
+aside .left_Btn::before {
+  background: url(../img/btn_left_Text.png) no-repeat;
+  background-size: contain;
+}
+
+aside .right_Btn {
+  background: url(../img/btn_right.png) no-repeat;
+  background-size: contain;
+}
+
+aside .right_Btn::before {
+  background: url(../img/btn_right_Text.png) no-repeat;
+  background-size: contain;
+}
+
+footer .paltform_Logo {
+  background: url(../img/platform_logo.png) no-repeat;
+  background-size: 500%;
+}
+
+//BG
+.mainWrap {
+  background: url("../img/bg.png") no-repeat center;
+  background-size: 100%;
+}

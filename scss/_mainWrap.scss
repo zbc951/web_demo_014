@@ -1,0 +1,375 @@
+.mainWrap {
+  width: 100%;
+  min-width: 1400px;
+  height: auto;
+  position: relative;
+  margin-top: -10px;
+
+  .titleArea {
+    width: 100%;
+    height: 0;
+    padding-top: 6%;
+  }
+
+  .center {
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+
+    .gameTypeArea {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 446px);
+      grid-template-rows: repeat(2, 189px);
+      gap: 80px 20px;
+      padding: 77px 0;
+
+      .gameBlock {
+        width: 446px;
+        height: 161px;
+        background: $gameTypeBG;
+        border-radius: 28px;
+        padding: 9px;
+        box-sizing: border-box;
+        box-shadow: 3px 3px 3px 3px $gametypeBoder;
+        position: relative;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &.active {
+          .sidePic {
+            transform: translate(15px, -5%);
+          }
+          .sidePic.sport {
+            transform: translate(15px, -5%);
+          }
+
+          .sidePic.live {
+            transform: translate(18px, 0px);
+          }
+
+          .sidePic.slot {
+            transform: translate(9.5px, 0px);
+          }
+
+          
+          .sidePic::after {
+            transform: scale(1.2);
+          }
+
+          .typePic .child {
+            transform: scale(1.2);
+          }
+
+          .inBtn {
+            transform: scale(1.1);
+            filter: hue-rotate(-60deg);
+          }
+        }
+
+        .typePic {
+          width: 425px;
+          height: 138px;
+          border-radius: 16px;
+          box-shadow: 2px 2px 2px 2px $gametypeBoder;
+          overflow: hidden;
+          position: relative;
+
+
+          &::before {
+            content: " ";
+            width: 234px;
+            height: 241px;
+            position: absolute;
+            bottom: 0;
+            left: -10px;
+          }
+
+          .child {
+            width: 100%;
+            height: 100%;
+            transition: all 0.2s ease-in;
+
+            &.sport {
+              background-position-y: 0%;
+            }
+
+            &.live {
+                background-position-y: 20%;
+            }
+
+            &.slot {
+                background-position-y: 40%;
+            }
+
+            &.ticket {
+                background-position-y: 60%;
+            }
+
+            &.fish {
+                background-position-y: 80%;
+            }
+
+            &.poker {
+                background-position-y: 100%;
+            }
+          }
+        }
+
+        .sidePic {
+          width: 234px;
+          height: 241px;
+          position: absolute;
+          bottom: 0;
+          left: -10px;
+          transition: all 0.2s ease-in;
+
+          &::after {
+            content: " ";
+            width: 283px;
+            height: 106px;
+            position: absolute;
+            top: 105px;
+            right: -207px;
+            transition: all 0.2s ease-in;
+          }
+
+          &.sport {
+            background-position-x: 0%;
+
+            &::after {
+              background-position-y: 0%;
+            }
+          }
+
+          &.live {
+            background-position-x: 20%;
+            
+            &::after {
+              background-position-y: 20%;
+            }
+          }
+
+          &.slot {
+            background-position-x: 40%;
+            
+            &::after {
+              background-position-y: 40%;
+            }
+          }
+
+          &.ticket {
+            background-position-x: 60%;
+            
+            &::after {
+              background-position-y: 60%;
+            }
+          }
+
+          &.fish {
+            background-position-x: 80%;
+            
+            &::after {
+              background-position-y: 80%;
+            }
+          }
+
+          &.poker {
+            background-position-x: 100%;
+            
+            &::after {
+              background-position-y: 100%;
+            }
+          }
+        }
+
+        .inBtn {
+          width: 368px;
+          height: 58px;
+          position: absolute;
+          bottom: -23px;
+          left: 40px;
+          cursor: pointer;
+          transition: all 0.2s ease-in;
+        }
+      }
+    }
+  }
+
+  .newsArea {
+    width: 100%;
+    height: 362px;
+    min-height: 360px;
+    padding: 171px 220px;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      content: " ";
+      width: 100%;
+      height: 5px;
+      background: $newsBorder;
+      position: absolute;
+      top: -5px;
+      left: 0;
+    }
+
+    &::after {
+      content: " ";
+      width: 311px;
+      height: 140px;
+      position: absolute;
+      top: 47px;
+      left: 1113px;
+      animation: bounce 2s 3.8s ease-in infinite;
+
+      @keyframes bounce {
+        from {
+          transform: none;
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        to {
+          transform: none;
+        }
+      }
+    }
+
+    .newsBtn_Line {
+      width: 721px;
+      height: 156px;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+
+      &::before {
+        content: " ";
+        width: 555px;
+        height: 452px;
+        position: absolute;
+        top: -135px;
+        right: -781px;
+        animation: fade-left 3.5s linear;
+
+        @keyframes fade-left {
+          0% {
+            transform: translateX(555px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      }
+
+      &::after {
+        content: " ";
+        width: 802px;
+        height: 67px;
+        position: absolute;
+        top: -132px;
+        left: -36px;
+        animation: fade-bottom 3s ease-in;
+
+        @keyframes fade-bottom {
+          0% {
+            transform: translateY(50px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+
+      .Newbtn {
+        width: 133px;
+        height: 134px;
+        background: $gameTypeBG;
+        border-radius: 30px;
+        padding: 91px 23px 15px 23px;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: " ";
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          background: $newsBtnBG;
+          box-shadow: 1px 3px 5px $newsBtn_shadow;
+          position: absolute;
+          top: -22px;
+          left: 18px;
+        }
+
+        &.saving {
+          &::after {
+            background-position-x: 0%;
+          }
+        }
+
+        &.money {
+          &::after {
+            background-position-x: 34%;
+          }
+        }
+
+        &.wallet {
+          padding: 87px 23px 15px 15px;
+
+          &::after {
+            background-position-x: 69%;
+          }
+        }
+
+        &.vip {
+          padding: 94px 23px 15px 16px;
+
+          &::after {
+            background-position-x: 102%;
+          }
+        }
+
+        &::after {
+          content: " ";
+          width: 58px;
+          height: 54px;
+          position: absolute;
+          top: -2px;
+          left: 38px;
+        }
+
+        p {
+          width: 104px;
+          height: 38px;
+          color: $font3;
+          font-size: 22px;
+          font-weight: bold;
+
+          &.wallet {
+            font-size: 16px;
+            text-align: center;
+          }
+
+          &.vip {
+            font-size: 18px;
+            text-align: center;
+          }
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+          filter: brightness(1.2);
+          transform: scale(1.1);
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
+}

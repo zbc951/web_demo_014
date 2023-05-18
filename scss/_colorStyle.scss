@@ -1,0 +1,125 @@
+//大背景色
+$footerTopBG: #1d2088;
+$footerBottomBG: linear-gradient(to right, #ef3273 0%, #9f13f4 100%);
+
+//主字色
+$mainfont: #ffff;
+$subfont: #fff100;
+$font3: #000000;
+
+//border色
+$navBorder: linear-gradient(
+  to left,
+  #760029 5%,
+  #ee1560 55%,
+  #ff4f8c 87%,
+  #ee1560 100%
+);
+$mqBoder: #ffff;
+$gametypeBoder: #879ba4;
+$newsBorder: linear-gradient(to right, #a07737 29%, #eddeae 100%);
+
+//header
+$headerBG: #000000;
+$navBG: linear-gradient(
+  to top,
+  #760029 5%,
+  #ee1560 55%,
+  #ff4f8c 87%,
+  #ee1560 100%
+);
+$navBGt: linear-gradient(
+  to top,
+  #760029 10%,
+  #ee1560 65%,
+  #ff4f8c 97%,
+  #ee1560 100%
+);
+$navHover: linear-gradient(
+  to bottom,
+  #760029 5%,
+  #ee1560 55%,
+  #ff4f8c 87%,
+  #ee1560 100%
+);
+$langBG: #1d2088;
+
+//marquee
+$mqBG: rgba(255, 255, 255, 0.85);
+
+//mainWrap
+$gameTypeBG: #ffff;
+$newsBtnBG: linear-gradient(to right, #a120fa 0%, #f5208a 100%);
+$newsBtn_shadow: rgb(21, 0, 45, 48%);
+
+//footer
+$fBtn1: #22ac38;
+$fBtn2: #ff7915;
+
+//按鈕
+@mixin header_Btn1 {
+  background: linear-gradient(to top, #d25400 0%, #ffba03 50%, #ffe08c 100%);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #ffa903;
+  box-shadow: inset -2px -3px rgb(209, 123, 0, 50%);
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &.active {
+    background: linear-gradient(
+      to bottom,
+      #d25400 0%,
+      #ffba03 50%,
+      #ffe08c 100%
+    );
+  }
+}
+
+@mixin header_Btn2 {
+  background: linear-gradient(to top, #00576d 0%, #00aeac 50%, #27fff7 100%);
+  color: #ffff;
+  border: 1px solid #8be5ff;
+  box-shadow: inset -2px -3px rgb(0, 27, 16, 50%);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &.active {
+    background: linear-gradient(
+      to bottom,
+      #00576d 0%,
+      #00aeac 50%,
+      #27fff7 100%
+    );
+  }
+}
+
+@mixin banner_Btn {
+  background: #000000;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+@mixin footer_Btn {
+  width: 215px;
+  height: 40px;
+  color: #ffff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #ffff;
+  padding: 9px 31px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active,
+  &.active {
+    filter: brightness(1.2);
+  }
+}
